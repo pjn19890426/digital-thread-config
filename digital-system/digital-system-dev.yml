@@ -1,10 +1,10 @@
 spring:
-    datasource:
+   datasource:
       name: test
       url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8
       username: root
       password: 123456
-      # 使用druid数据源
+# 使用druid数据源
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.jdbc.Driver
       filters: stat,wall,slf4j
@@ -20,4 +20,14 @@ spring:
       testOnReturn: false
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
-      
+#rabbitmq:刷新配置访问的方式 http://localhost:8600/actuator/bus-refresh
+   rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+management:
+   endpoints:
+      web:
+         exposure:
+            include: bus-refresh
