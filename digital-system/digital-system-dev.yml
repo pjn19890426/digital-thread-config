@@ -1,4 +1,4 @@
-test: 666666
+test: 555555
 spring:
    datasource:
       name: test
