@@ -24,7 +24,7 @@ spring:
       data:
          neo4j:
             username: neo4j
-            password: 12345612
+            password: 123456
             uri: http://localhost:7474
 #rabbitmq:刷新配置访问的方式 http://localhost:8600/actuator/bus-refresh
    rabbitmq:
