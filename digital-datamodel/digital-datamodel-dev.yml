@@ -1,4 +1,4 @@
-test: 6676666
+test: "完成了"
 
 spring:
 #rabbitmq:刷新配置访问的方式 http://localhost:8600/actuator/bus-refresh
