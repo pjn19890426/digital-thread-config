@@ -1,4 +1,4 @@
-test: "李小龙3"
+test: "李小龙"
 spring:
    data:
       neo4j:
