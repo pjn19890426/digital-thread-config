@@ -1,4 +1,4 @@
-test: "5555"
+test: "22222"
 spring:
    data:
       neo4j:
