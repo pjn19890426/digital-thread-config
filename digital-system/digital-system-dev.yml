@@ -22,11 +22,10 @@ spring:
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
       data:
-         neo4j:
+          neo4j:
+            uri: bolt://localhost:7687
             username: neo4j
             password: 123456
-            #uri: http://localhost:7474
-            uri: bolt://localhost:7687
 #rabbitmq:刷新配置访问的方式 http://localhost:8600/actuator/bus-refresh
    rabbitmq:
       host: localhost
