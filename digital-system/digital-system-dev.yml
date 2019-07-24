@@ -1,4 +1,4 @@
-test: "3333"
+test: "5555"
 spring:
    data:
       neo4j:
@@ -26,4 +26,16 @@ spring:
       testOnReturn: false
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
+   #rabbitmq:刷新配置访问的方式 http://localhost:8600/actuator/bus-refresh
+   rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+#(*)actuator/bus-refresh、actuator/info 等spring-boot-starter-actuator
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"
 
