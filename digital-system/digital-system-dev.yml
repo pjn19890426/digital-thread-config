@@ -1,4 +1,4 @@
-test: "李小龙"
+test: "测试成功了吗"
 spring:
    data:
       neo4j:
