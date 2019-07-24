@@ -32,9 +32,3 @@ spring:
       port: 5672
       username: guest
       password: guest
-#(*)actuator/bus-refresh、actuator/info 等spring-boot-starter-actuator
-management:
-   endpoints:
-      web:
-         exposure:
-            include: "*"
