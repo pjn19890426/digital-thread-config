@@ -1,4 +1,4 @@
-test: "测试成功了吗222"
+test: "21212"
 spring:
    data:
       neo4j:
