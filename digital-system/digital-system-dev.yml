@@ -11,7 +11,7 @@ spring:
       password: 123456
    datasource:
       name: test
-      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/digital_thread?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC
       username: root
       password: 123456
 # 使用druid数据源
