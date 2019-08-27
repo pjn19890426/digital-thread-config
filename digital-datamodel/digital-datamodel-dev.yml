@@ -29,7 +29,7 @@ spring:
 #rabbitmq:刷新配置访问的方式 http://localhost:8600/actuator/bus-refresh
    rabbitmq:
       host: localhost
-      port: 5673
+      port: 5674
       username: guest
       password: guest
 management:
