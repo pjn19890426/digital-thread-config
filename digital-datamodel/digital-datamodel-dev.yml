@@ -37,3 +37,7 @@ management:
       web:
          exposure:
             include: "*"
+mybatis:
+   basepackage: com.je.digital.thread.system.mapper
+   xmlLocation: classpath:mapper/**/*.xml
+   mapper-locations: classpath*:mapper/*.xml
