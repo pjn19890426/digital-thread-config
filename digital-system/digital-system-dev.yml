@@ -1,4 +1,6 @@
 test: "xxxxxxxx"
+server:
+   port: 8072
 spring:
    data:
       neo4j:
