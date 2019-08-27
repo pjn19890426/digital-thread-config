@@ -1,4 +1,4 @@
-test:"xxxxxxxx"
+test: "xxxxxxxx"
 spring:
    data:
       neo4j:
