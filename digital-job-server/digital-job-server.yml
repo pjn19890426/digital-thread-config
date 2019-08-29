@@ -24,8 +24,6 @@ info:
         name: com.je.digital.thread
 logging:
     config: classpath:logback.xml
-server:
-    port: 8083
 spring:
     activemq:
         pool:
@@ -33,8 +31,6 @@ spring:
             expiry-timeout: 10000
             idle-timeout: 30000
             max-connections: 50
-    application:
-        name: digital-job-server
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         filters: stat,wall,slf4j
