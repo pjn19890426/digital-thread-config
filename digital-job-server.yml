@@ -1,0 +1,76 @@
+activemq:
+    password: admin
+    queue: Q_Queue1
+    topic: T_Topic1
+    url: tcp://localhost:61616
+    username: admin
+    virtual:
+        topic: VirtualTopic.Topic1
+        topic.A: Consumer.A.VirtualTopic.Topic1
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8032/eureka
+    instance:
+        instance-id: digital-job${spring.cloud.client.ip-address}:${server.port}
+        prefer-ip-address: true
+fuzzy: modelName:BOM,col:Organization_code,replace:c|modelName:a,col:b,replace:A
+info:
+    app:
+        name: digital-datamodel
+    build:
+        artifactId: $project.artifactId$
+    company:
+        name: com.je.digital.thread
+logging:
+    config: classpath:logback.xml
+server:
+    port: 8083
+spring:
+    activemq:
+        pool:
+            enabled: true
+            expiry-timeout: 10000
+            idle-timeout: 30000
+            max-connections: 50
+    application:
+        name: digital-job-server
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        filters: stat,wall,slf4j
+        initialSize: 1
+        maxActive: 20
+        maxOpenPreparedStatements: 20
+        maxWait: 60000
+        minEvictableIdleTimeMillis: 300000
+        minIdle: 1
+        name: test
+        password: 123456
+        poolPreparedStatements: true
+        testOnBorrow: false
+        testOnReturn: false
+        testWhileIdle: true
+        timeBetweenEvictionRunsMillis: 60000
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/digital_thread?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC
+        username: root
+        validationQuery: select 'x'
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        default-property-inclusion: non_null
+        time-zone: GMT+8
+    neo4j:
+        password: 123456
+        url: bolt://localhost:7687
+        username: neo4j
+xxl:
+    job:
+        accessToken: ''
+        admin:
+            addresses: http://127.0.0.1:8080/digital-job-admin
+        executor:
+            appname: digital-job-executor
+            ip: ''
+            logpath: /data/applogs/xxl-job/jobhandler
+            logretentiondays: -1
+            port: 9998
