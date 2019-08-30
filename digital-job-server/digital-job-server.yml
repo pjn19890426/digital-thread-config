@@ -12,13 +12,13 @@ eureka:
         service-url:
             defaultZone: http://localhost:8032/eureka
     instance:
-        instance-id: digital-job${spring.cloud.client.ip-address}:${server.port}
+        instance-id: digital-job-server${spring.cloud.client.ip-address}:${server.port}
         prefer-ip-address: true
 fuzzy: organization_code,ora_code,BOM,test,test,c|item_code,item_code,BOM,Instance,BOM,d
 method: GET
 info:
     app:
-        name: digital-datamodel
+        name: digital-job-server
     build:
         artifactId: $project.artifactId$
     company:
