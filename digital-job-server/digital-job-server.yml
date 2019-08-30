@@ -14,7 +14,7 @@ eureka:
     instance:
         instance-id: digital-job${spring.cloud.client.ip-address}:${server.port}
         prefer-ip-address: true
-fuzzy: Organization_code,ora_code,BOM,test,test,c|item_code,item_code,BOM,Instance,BOM,d
+fuzzy: organization_code,ora_code,BOM,test,test,c|item_code,item_code,BOM,Instance,BOM,d
 method: GET
 info:
     app:
