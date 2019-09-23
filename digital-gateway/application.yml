@@ -1,0 +1,69 @@
+# Tomcat
+server:
+   port: 8011
+spring:
+   application:
+      name: digital-gateway
+#--------------------Zuul-----------------------
+zuul:
+  routes:
+    digital-system:
+      path: /api/system-service/**
+      serviceId: digital-system
+      sensitiveHeaders: "*"
+    digital-datamodel:
+      path: /api/datamodel-service/**
+      serviceId: digital-datamodel
+      sensitiveHeaders: "*"
+    digital-job-admin:
+      path: /api/digital-job-admin/**
+      serviceId: digital-job-admin
+      sensitiveHeaders: "*"
+    digital-auth:
+      path: /auth/**
+      serviceId: digital-auth
+      sensitiveHeaders: "*"
+    digital-orchestrationservice:
+      path: /api/digital-orchestrationservice/**
+      serviceId: digital-orchestrationservice
+      sensitiveHeaders: "*"
+  retryable: false
+  ignored-services: "*"
+  ribbon:
+    eager-load:
+      enabled: true
+  host:
+    connect-timeout-millis: 8000
+    socket-timeout-millis: 8000
+  add-proxy-headers: true
+
+
+#---------------------OAuth2---------------------
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:${server.port}/auth/oauth/token
+      user-authorization-uri: http://localhost:${server.port}/auth/oauth/authorize
+      client-id: web
+    resource:
+      user-info-uri:  http://localhost:${server.port}/auth/users/member
+      prefer-token-info: false
+
+#----------------------超时配置-------------------
+ribbon:
+  ReadTimeout: 8000
+  ConnectTimeout: 8000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
+  eureka:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+           strategy: SEMAPHORE
+           thread:
+            timeoutInMilliseconds: 15500
