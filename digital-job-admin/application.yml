@@ -1,0 +1,74 @@
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8031/eureka,http://localhost:8032/eureka
+    instance:
+        instance-id: digital-job-admin${spring.cloud.client.ip-address}:${server.port}
+        prefer-ip-address: true
+info:
+    app:
+        name: digital-job-admin
+    build:
+        artifactId: $project.artifactId$
+        version: $project.version$
+    company:
+        name: com.je.digital.thread
+mybatis:
+    mapper-locations: classpath:/mybatis-mapper/*Mapper.xml
+security:
+    oauth2:
+        resource:
+            id: digital-job-admin
+            prefer-token-info: false
+            user-info-uri: http://localhost:8011/auth/users/member
+server:
+    port: 18080
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: 123456
+        tomcat:
+            max-active: 30
+            max-wait: 10000
+            test-on-borrow: true
+            validation-interval: 30000
+            validation-query: SELECT 1
+        url: jdbc:mysql://127.0.0.1:3306/xxl_job?Unicode=true&characterEncoding=UTF-8
+        username: root
+    freemarker:
+        charset: UTF-8
+        request-context-attribute: request
+        settings:
+            number_format: 0.##########
+        suffix: .ftl
+        templateLoaderPath: classpath:/templates/
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        default-property-inclusion: non_null
+        time-zone: GMT+8
+    mail:
+        host: smtp.qq.com
+        password: xxx
+        port: 25
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    socketFactory:
+                        class: javax.net.ssl.SSLSocketFactory
+                    starttls:
+                        enable: true
+                        required: true
+        username: xxx@qq.com
+    mvc:
+        static-path-pattern: /static/**
+    neo4j:
+        password: 123456
+        url: bolt://localhost:7687
+        username: neo4j
+    resources:
+        static-locations: classpath:/static/
+xxl:
+    job:
+        accessToken: ''
+        i18n: en
