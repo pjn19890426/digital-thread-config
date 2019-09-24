@@ -69,7 +69,7 @@ mybatis:
 ldap:
   url: "ldap://192.168.202.36:389"
   base: dc=mycompany,dc=com
-  userDn: cn=manager
+  userDn: cn=Manager,ou=people,dc=mycompany,dc=com
   userPwd: secret
   referral: follow
   dbswitch: "1"
