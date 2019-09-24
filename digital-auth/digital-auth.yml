@@ -72,5 +72,5 @@ ldap:
   userDn: cn=manager
   userPwd: secret
   referral: follow
-  dbswitch: "0"
+  dbswitch: "1"
   domainName: "%s@example.com"
