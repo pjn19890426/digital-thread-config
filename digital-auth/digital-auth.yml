@@ -70,7 +70,7 @@ ldap:
   url: "ldap://192.168.202.36:389"
   base: dc=mycompany,dc=com
   userDn: cn=Manager,dc=mycompany,dc=com
-  userPwd: secret
+  userPwd: secret1
   referral: follow
   dbswitch: "1"
   domainName: "%s@example.com"
