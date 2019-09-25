@@ -20,7 +20,7 @@ zuul:
       serviceId: digital-job-admin
       sensitiveHeaders: "*"
     digital-auth:
-      path: /auth/**
+      path: /api/auth/**
       serviceId: digital-auth
       sensitiveHeaders: "*"
     digital-orchestrationservice:
