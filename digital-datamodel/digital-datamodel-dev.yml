@@ -41,3 +41,9 @@ mybatis:
    basepackage: com.je.digital.thread.system.mapper
    xmlLocation: classpath:mapper/**/*.xml
    mapper-locations: classpath*:mapper/*.xml
+security:
+    oauth2:
+        resource:
+            id: digital-datamodel
+            prefer-token-info: false
+            user-info-uri: http://localhost:8011/api/auth/users/member
