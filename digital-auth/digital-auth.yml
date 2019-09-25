@@ -67,7 +67,7 @@ mybatis:
   xmlLocation: classpath:mapper/**/*.xml
   
 ldap:
-  url: "ldap://192.168.202.36:389"
+  url: "ldap://localhost:389"
   base: dc=mycompany,dc=com
   userDn: cn=Manager,dc=mycompany,dc=com
   userPwd: secret
