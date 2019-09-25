@@ -42,11 +42,11 @@ zuul:
 security:
   oauth2:
     client:
-      access-token-uri: http://localhost:${server.port}/auth/oauth/token
-      user-authorization-uri: http://localhost:${server.port}/auth/oauth/authorize
+      access-token-uri: http://localhost:${server.port}/auth/api/oauth/token
+      user-authorization-uri: http://localhost:${server.port}/api/auth/oauth/authorize
       client-id: web
     resource:
-      user-info-uri:  http://localhost:${server.port}/auth/users/member
+      user-info-uri:  http://localhost:${server.port}/api/auth/users/member
       prefer-token-info: false
 
 #----------------------超时配置-------------------
