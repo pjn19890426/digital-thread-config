@@ -20,7 +20,7 @@ security:
         resource:
             id: digital-job-admin
             prefer-token-info: false
-            user-info-uri: http://localhost:8011/auth/users/member
+            user-info-uri: http://localhost:8011/api/auth/users/member
 server:
     port: 18080
 spring:
